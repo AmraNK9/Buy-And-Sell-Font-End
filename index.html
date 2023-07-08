@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<title>Buy and Shop</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/mdbootstrap/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/mdbootstrap/css/mdb.min.css"
+		/>
+        <link rel="stylesheet" href="css/products.css">
+		<style>
+			/* Custom styles */
+			body {
+				padding-top: 70px;
+			}
+			template {
+				width: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- Navbar -->
+		<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+			<a
+				class="navbar-brand"
+				href="#"
+				data-page="home"
+				>Buy & Shop</a
+			>
+			<button
+				class="navbar-toggler"
+				type="button"
+				data-toggle="collapse"
+				data-target="#navbarNav"
+				aria-controls="navbarNav"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div
+				class="collapse navbar-collapse"
+				id="navbarNav"
+			>
+				<ul class="navbar-nav ml-auto">
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="#"
+							data-page="home"
+							>Home</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="#"
+							data-page="products"
+							>Products</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="#"
+							data-page="cart"
+							>Cart</a
+						>
+					</li>
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							href="#"
+							data-page="checkout"
+							>Checkout</a
+						>
+					</li>
+				</ul>
+			</div>
+		</nav>
+
+		<!-- Main Content -->
+		<div class="container mt-5">
+			<div id="content">
+				<!-- Content dynamically loaded with JavaScript -->
+			</div>
+		</div>
+
+		<!-- Templates -->
+		<template id="home-template">
+			<h1>Welcome to Buy & Shop!</h1>
+			<p>Start exploring our wide range of products.</p>
+		</template>
+
+		<template id="products-template">
+			<!-- Products dynamically loaded here -->
+			<!-- Home Component -->
+			<section
+				id="home"
+				class="py-5"
+			>
+				<div class="container">
+					<h2 class="text-center">Categories</h2>
+					<div class="row">
+						<div class="col-md-3 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Cars</h5>
+									<p class="card-text">Browse and sell cars.</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										>View</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Phones</h5>
+									<p class="card-text">Browse and sell phones.</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										>View</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Bikes</h5>
+									<p class="card-text">Browse and sell bikes.</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										>View</a
+									>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-3 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Computers</h5>
+									<p class="card-text">Browse and sell computers.</p>
+									<a
+										href="#"
+										class="btn btn-primary"
+										>View</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Filter Component -->
+			<section
+				id="filter"
+				class="py-5 bg-light"
+			>
+				<div class="container">
+					<h2 class="text-center">Filter</h2>
+					<div class="row">
+						<div class="col-md-4 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Brand</h5>
+									<select class="browser-default custom-select">
+										<option value="">Select Brand</option>
+										<option value="1">Brand 1</option>
+										<option value="2">Brand 2</option>
+										<option value="3">Brand 3</option>
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Price</h5>
+									<input
+										type="range"
+										class="custom-range"
+										min="0"
+										max="1000"
+										step="100"
+										id="priceRange"
+									/>
+									<p
+										id="priceValue"
+										class="text-center"
+									>
+										0
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 mb-4">
+							<div class="card">
+								<div class="card-body">
+									<h5 class="card-title">Condition</h5>
+									<div class="custom-control custom-radio">
+										<input
+											type="radio"
+											class="custom-control-input"
+											id="newCondition"
+											name="condition"
+											checked
+										/>
+										<label
+											class="custom-control-label"
+											for="newCondition"
+											>New</label
+										>
+									</div>
+									<div class="custom-control custom-radio">
+										<input
+											type="radio"
+											class="custom-control-input"
+											id="usedCondition"
+											name="condition"
+										/>
+										<label
+											class="custom-control-label"
+											for="usedCondition"
+											>Used</label
+										>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</template>
+
+		<template id="cart-template">
+			<h2>Cart</h2>
+			<ul
+				class="list-group"
+				id="cart"
+			>
+				<!-- Cart items dynamically loaded here -->
+			</ul>
+		</template>
+
+		<template id="checkout-template">
+			<h2>Checkout</h2>
+			<p>Fill in your details to complete the purchase.</p>
+		</template>
+
+		<!-- Scripts -->
+		<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/mdbootstrap/js/bootstrap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/mdbootstrap/js/mdb.min.js"></script>
+		<script>
+			// Page data
+			const pages = [
+				{ name: "home", templateId: "home-template" },
+				{ name: "products", templateId: "products-template" },
+				{ name: "cart", templateId: "cart-template" },
+				{ name: "checkout", templateId: "checkout-template" },
+			];
+
+			// Initialize navigation
+			function init() {
+				const navLinks = document.querySelectorAll(".nav-link");
+				navLinks.forEach((link) => {
+					link.addEventListener("click", navigate);
+				});
+
+				navigate({ target: { dataset: { page: "home" } } });
+			}
+
+			// Navigate to a page
+			function navigate(event) {
+				const page = event.target.dataset.page;
+
+				// Update active class
+				const navLinks = document.querySelectorAll(".nav-link");
+				navLinks.forEach((link) => {
+					if (link.classList.contains("active")) {
+						link.classList.remove("active");
+					}
+				});
+
+				event.target.classList.add("active");
+
+				// Load page content
+				const content = document.getElementById("content");
+				content.innerHTML = "";
+
+				const template = document.getElementById(getTemplateId(page));
+				const clone = template.content.cloneNode(true);
+				content.appendChild(clone);
+			}
+
+			// Get template ID for a page
+			function getTemplateId(page) {
+				const currentPage = pages.find((p) => p.name === page);
+				return currentPage ? currentPage.templateId : "";
+			}
+
+			// Run initialization
+			init();
+		</script>
+	</body>
+</html>
