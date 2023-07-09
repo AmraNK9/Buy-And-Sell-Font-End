@@ -4,35 +4,39 @@
     display: flex;
     align-items: center;
     justify-content: center;
-  }
+}
 
-  .navbar-brand,
-  .nav-link {
+.navbar-brand,
+.nav-link {
     color: #fff;
     font-weight: bold;
     font-size: 18px;
-  }
+}
 
-  .navbar-brand:hover,
-  .nav-link:hover {
+.navbar-brand:hover,
+.nav-link:hover {
     color: #fff;
-  }
+}
 
-  .navbar-logo {
+.navbar-logo {
     font-size: 24px;
     font-weight: bold;
     letter-spacing: 2px;
-  }
+}
 
-  .navbar-logo span:first-child {
+.navbar-logo span:first-child {
     font-size: 36px;
     font-weight: 900;
-  }
+}
 
-  .navbar-logo span:not(:first-child) {
+.navbar-logo span:not(:first-child) {
     font-weight: 700;
-  }
+}
 
-  .profile-avatar {
+.profile-avatar {
     width: 50px;
-  }
+}
+
+.nav-container {
+    padding: 20px;
+}
